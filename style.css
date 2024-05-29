@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -50,8 +51,10 @@ body {
       }
       @media screen and (max-width: 800px) {
         body {
-            background-size: cover;
-            height: 115vh;
+            height: 100vh;
+        }
+        #imglogo{
+            height: 3rem;
         }
         .title {
             font-size: 10vw;
