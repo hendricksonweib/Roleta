@@ -4,16 +4,17 @@
 }
 
 body {
-    position: relative;
-    background-image: url('background.svg');
+	position: relative;
+	background-image: url('background.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+	background-size: cover; 
+	height: 100%;
     color: #fff;
     font-size: 18px;
     font-family: 'Exo 2', sans-serif;
-    margin: 0;
+    margin: 0; 
 }
+
 .conteiner{
     display: flex;
     justify-content: center;
@@ -47,3 +48,17 @@ body {
       #btnStart:hover {
         background: linear-gradient(to right, #FFD700, #FFA500);
       }
+      @media screen and (max-width: 800px) {
+        body {
+            background-size: cover;
+            height: 115vh;
+        }
+        .title {
+            font-size: 10vw;
+            
+        }
+        #btnStart{
+            width: 350px;
+          }
+          
+    }    
