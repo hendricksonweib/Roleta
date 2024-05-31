@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta da sorte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="conteiner">
+        <form id="myForm" action="https://api.sheetmonkey.io/form/82SuDbPYXHKNmysmPXq4f" method="post">
+            <label>Nome:
+                <input type="text" class="control" name="Nome" required /></label>
+            <input type="hidden"  name="Created" value="x-sheetmonkey-current-date-time" />
+            <label>Email:
+                <input class="control" type="email" name="Email" required /></label>
+            <label>Whatsapp:
+                <input class="control" type="number" name="Whatsapp" required /></label>
+            <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+            <input type="submit" value="Submit" id="btnStart" />
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const form = event.target;
+
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form)
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = 'roleta.html';
+                } else {
+                    alert('Houve um problema ao enviar o formulário. Tente novamente.');
+                }
+            }).catch(error => {
+                alert('Houve um problema ao enviar o formulário. Tente novamente.');
+            });
+        });
+    </script>
+</body>
+
+</html>

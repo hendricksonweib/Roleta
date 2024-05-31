@@ -49,6 +49,16 @@ body {
       #btnStart:hover {
         background: linear-gradient(to right, #FFD700, #FFA500);
       }
+
+      label, form{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .control{
+        height: 2rem;
+        border-radius: 8px;
+      }
       @media screen and (max-width: 800px) {
         body {
             height: 100vh;
